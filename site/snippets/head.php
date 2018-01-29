@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-  Stellar Theme by HIWEB & HTML5 UP
-  HTML template by html5up.net | @ajlkn
-  Kirby theme by hiweb.fr | @_hiweb
--->
 <html lang="en">
   <head>
     <meta charset="utf-8">
