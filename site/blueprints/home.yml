@@ -1,0 +1,291 @@
+title: Home
+pages: false
+files: true
+fields:
+
+  ###################################################
+
+  section1:
+    label: Mission
+    id: section1
+    type: tab
+    icon: home
+  
+  section1menu:
+    label: Name of the introduction section in the menu
+    type: text
+    icon: bars
+    width: 1/2
+    required: true
+
+  introtitle:
+    label: Introduction title
+    type: text
+    icon: header
+    width: 1/2
+    required: true
+
+  section1info:
+    label: Info
+    type: info
+    text: This first section can be used with or without an image.
+
+  introdisplayimage:
+    label: Display Image
+    type: switch
+    width: 1/2
+    texts:
+      - Display the image
+      - Don't display any image
+  
+  introimage:
+    label: Introduction Image
+    type: image
+    width: 1/2
+
+  introtext:
+    label: Introduction text
+    type: markdown
+    icon: quote-left
+    header1: h2
+    header2: h3
+    required: true
+  
+  introbuttonlabel:
+    label: Introduction button label
+    type: text
+    icon: mouse-pointer
+    width: 1/2
+    help: If left empty, the button will not be displayed
+
+  introbuttonurl:
+    label: Introduction button url
+    type: text
+    icon: link
+    width: 1/2
+    help: "Enter an anchor (i.e. #intro, #features, #main, #bottom), the path to a page (i.e. contact) or a url (i.e. http://hiweb.fr)."
+
+  ###################################################
+
+  section2:
+    label: Beispiele
+    id: section2
+    type: tab
+    icon: diamond
+
+
+  
+  section2menu:
+    label: Name of the features section in the menu
+    type: text
+    icon: bars
+    required: true
+    width: 1/2
+
+  featurestitle:
+    label: Features title
+    type: text
+    icon: header
+    required: true
+    width: 1/2
+
+  section2info:
+    label: Features info
+    type: info
+    text: In this section, there are three columns. Add entries in the structure field below. Only the first three will be displayed.
+
+  features:
+    label: Features
+    type: structure
+    style: items
+    modalsize: large
+    entry: >
+      #<i class=" fa fa-{{icon}}"></i></br></br>
+      <img src="http://ticketh.de/content/1-home/{{icon}}" alt="{{title}}></br>
+      <strong>{{title}}</strong></br>
+      {{text}}</br></br>
+      Button: {{buttonlabel}}</br>
+      URL: {{buttonurl}}
+
+    fields:
+
+      icon:
+        label: Bild
+        type: image
+      #  icon: square-o
+      #  placeholder: heart-o
+        required: true
+        width: 1/2
+       # help: All icons available from <a href="http://glyphsearch.com/?library=font-awesome&copy=name" target="_blank">Font Awesome.</a> Click on an icon to copy its name and paste here.
+      iconstyle:
+        label: Icon style (color)
+        type: select
+        required: true
+        width: 1/2
+        default: 1
+        options:
+          1: Red
+          3: Purple
+          5: Blue
+      title:
+        type: text
+        label: Feature title
+        icon: header
+        required: true
+      text:
+        type: textarea
+        label: Feature text
+        required: true
+      buttonlabel:
+        type: text
+        label: Button label
+        icon: mouse-pointer
+        width: 1/2
+        help: If you leave this empty, the button will not be displayed.
+      buttonurl:
+        label: Button url
+        type: text
+        icon: link
+        width: 1/2
+        help: "Enter an anchor (i.e. #intro, #features, #main, #bottom), the path to a page (i.e. contact) or a url (i.e. http://hiweb.fr)."
+
+
+  ###################################################
+
+  section3:
+    label: Roadmap
+    id: section3
+    type: tab
+    icon: line-chart
+
+  section3menu:
+    label: Name of the stats section in the menu
+    type: text
+    icon: bars
+    required: true
+    width: 1/2
+
+  statstitle:
+    label: Title
+    type: text
+    icon: header
+    required: true
+    width: 1/2
+
+  statssubtitle:
+    label: Subtitle
+    type: textarea
+    icon: font
+    help: Optional subtitle
+
+  
+
+  statstext:
+    type: markdown
+    label: Main text
+    header1: h2
+    header2: h3
+    required: true
+
+  statsnumbers:
+    label: Roadmap Elemente
+    type: structure
+    style: items
+    modalsize: large
+    entry: >
+      <i class=" fa fa-{{icon}}"></i></br></br>
+      <strong>{{number}}</strong></br>
+      {{label}}
+    fields:
+      icon:
+        label: Icon
+        type: text
+        icon: square-o
+        placeholder: heart-o
+        required: true
+        help: All icons available from <a href="http://glyphsearch.com/?library=font-awesome&copy=name" target="_blank">Font Awesome.</a> Click on an icon to copy its name and paste here.
+      number:
+        label: Number or Stat
+        type: text
+        required: true
+      label:
+        type: text
+        label: Stat label
+        icon: line-chart
+        required: true
+
+  statsbuttonlabel:
+    type: text
+    label: Button label
+    icon: mouse-pointer
+    width: 1/2
+    help: If you leave this empty, the button will not be displayed.
+
+  statsbuttonurl:
+    label: Button url
+    type: text
+    icon: link
+    width: 1/2
+    help: "Enter an anchor (i.e. #intro, #features, #main, #bottom), the path to a page (i.e. contact) or a url (i.e. http://hiweb.fr)."
+
+
+  ###################################################
+
+  section4:
+    label: Bottom Section
+    id: section4
+    type: tab
+    icon: quote-left
+
+  section4menu:
+    label: Name of the bottom section in the menu
+    type: text
+    icon: bars
+    required: true
+    width: 1/2
+
+  bottomtitle:
+    label: Bottom section Title
+    type: text
+    icon: header
+    required: true
+    width: 1/2
+
+  bottomtext:
+    type: markdown
+    label: Bottom section text
+    required: true
+    header1: h2
+    header2: h3
+
+  bottombuttons:
+    label: Bottom section button
+    type: structure
+    style: items
+    modalsize: large
+    help: Between 0 and 5. 2 is recommended.
+    entry: >
+      <strong>Button style</strong>: {{class}}</br>
+      <strong>Button</strong>: {{label}}</br>
+      <strong>URL</strong>: {{url}}
+    fields:
+      class:
+        label: Button style
+        type: select
+        required: true
+        options:
+          white: White background
+          blue: Light blue background
+      label:
+        type: text
+        label: Button label
+        icon: mouse-pointer
+        width: 1/2
+        required: true
+      url:
+        label: Button url
+        type: text
+        icon: link
+        width: 1/2
+        help: "Enter an anchor (i.e. #intro, #features, #main, #bottom), the path to a page (i.e. contact) or a url (i.e. http://hiweb.fr)."
+        required: true

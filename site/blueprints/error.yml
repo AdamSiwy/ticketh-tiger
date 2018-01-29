@@ -1,0 +1,19 @@
+title: Page
+pages: true
+files: true
+fields:
+  title:
+    label: Title
+    type: text
+    icon: header
+  
+  cover:
+    label: Cover image
+    type: image
+    help: Optional Cover Image
+
+  text:
+    label: Text
+    type:  markdown
+    heading1: h2
+    heading2: h3

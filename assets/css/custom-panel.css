@@ -1,0 +1,23 @@
+@import url("ionicons.min.css");
+
+.structure-entries .structure-entry {
+ 	width: 48%;
+ 	float: left;
+ 	margin: 1%;
+ 	border-width: 1px;
+ 	min-height: 120px;
+}
+
+i[class^="ion-"] {
+	font-size: 3em;
+}
+
+.btn-preview {
+	font-weight: 600;
+    border-radius: 5em;
+    padding: .4em 1.5em;
+}
+
+.structure-entry .structure-entry-content {
+    word-break: break-word !important;
+}

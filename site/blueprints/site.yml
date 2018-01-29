@@ -1,0 +1,151 @@
+title: Site
+pages:
+  template:
+    - home
+    - default
+
+files: true
+fields:
+
+  general:
+    label: General
+    type: tab
+    icon: home
+    id: general
+
+  logo:
+    label: Logo
+    type: image
+    required: true
+
+  title:
+    label: Title
+    type: text
+    help: Displayed just beneath the logo.
+    required: true
+
+  tagline:
+    label: Site Tagline
+    type: textarea
+    help: Your tagline
+    required: true
+
+  seo:
+    label: SEO
+    type: tab
+    icon: wrench
+    id: seo
+
+  description:
+    label: Description
+    type: textarea
+    icon: font
+    buttons: false
+
+  keywords:
+    label: Keywords
+    type: tags
+    required: true
+
+  author:
+    label: Author
+    type: text
+    required: true
+
+  footer:
+    label: Footer
+    type: tab
+    icon: copyright
+    id: copyright
+
+  footerinfo:
+    label: Footer Information column
+    type: headline
+
+  footerinfotitle:
+    label: Footer Information title
+    type: text
+    icon: header
+    required: true
+
+  footerinfotext:
+    label: Footer Information text
+    type: textarea
+    icon: quote-left
+    required: true
+
+  footerinfobuttonlabel:
+    label: Footer Information button label
+    type: text
+    icon: mouse-pointer
+    width: 1/2
+    help: If left empty, the button will not be displayed
+
+  footerinfobuttonurl:
+    label: Footer Information button url
+    type: text
+    icon: link
+    width: 1/2
+    help: "Enter the path to a page (i.e. /contact) or a url (i.e. http://hiweb.fr)."
+
+  footercontact:
+    label: Footer Contact Details column
+    type: headline
+  
+  footercontacttitle:
+    label: Footer Contact Details title
+    type: text
+    icon: header
+    required: true
+
+  footercontactdetails:
+    label: Footer Contact Details
+    type: structure
+    style: items
+    modalsize: medium
+    entry: >
+        <p><strong>{{label}}</strong>: {{text}}</p>
+    fields:
+      label:
+        label: Label
+        type: text
+        icon: tag
+        required: true
+      text:
+        label: Text
+        type: textarea
+        icon: font
+        required: true
+
+  footericons:
+    label: Footer Contact Icons (Social Links)
+    type: structure
+    style: items
+    modalsize: medium
+    entry: >
+        <i class=" fa fa-{{icon}}"></i></br>
+        <p>URL: {{link}}</>
+    fields:
+      icon:
+        label: Icon
+        type: text
+        icon: square-o
+        placeholder: heart-o
+        required: true
+        help: All icons available from <a href="http://glyphsearch.com/?library=fontawesome&copy=name">Font Awesome.</a> Click on an icon to copy its name and paste here.
+      link:
+        label: URL
+        type: url
+        icon: link
+        required: true
+      label:
+        label: Label
+        type: text
+        icon: tag
+        required: true
+
+  copyright:
+    label: Copyright
+    type: textarea
+    icon: copyright
+    required: true
